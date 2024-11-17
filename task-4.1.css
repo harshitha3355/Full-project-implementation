@@ -1,0 +1,370 @@
+@font-face {
+  font-family: "font1";
+  src: url(/ZenDots-Regular.ttf);
+}
+@font-face {
+  font-family: "font2";
+  src: url(/Genos-Regular.ttf);
+}
+*{
+  padding: 10px;
+  margin: 0px;
+  font-family: "font2";
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: papayawhip;
+}
+nav{
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+}
+.navcont{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.myname{
+  font-family: "font1";
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.myname span{
+  color: darkslateblue;
+  font-family: "font1";
+}
+.hamburg, .cancel{
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: black;
+  display: none;
+  font-size: clamp(2.5rem, 0.5rem +5vw,3rem);
+}
+.navcont .links{
+  display: flex;
+  gap: 20px;
+}
+.navcont .links a{
+  position: relative;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 550;
+  transition: 0.5s linear;
+}
+.navcont .links a::before{
+  position: absolute;
+  content: "";
+  bottom: 3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: darkslateblue;
+  transition: 0.2s linear;
+}
+.navcont .links a:hover::before{
+  width: 100%;
+}
+.navcont .links a:hover{
+  color: darkslateblue;
+}
+.dropdown {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none; 
+  flex-direction: column;
+  backdrop-filter: blur(4px) brightness(40%);
+  box-shadow: 0 0 20px black;
+  transition: transform 0.3s ease-in-out; 
+  transform: translateY(-100%);
+}
+
+.dropdown.show {
+  display: flex; 
+  transform: translateY(-500); 
+}
+
+.dropdown a {
+  display: flex;
+  color: black;
+  text-decoration: none;
+  justify-content: center;
+  padding: 15px 0;
+  align-items: center;
+  transition: 0.2s linear;
+}
+
+.dropdown a:hover {
+  background-color: darkslateblue;
+}
+section{
+  width: 100%;
+  height: 100%;
+}
+.maincont{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.maincont .img{
+  width: 50%; 
+  height: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 0 0 50px darkslateblue;
+}
+.maincont .img img{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+@keyframes animate {
+  0%{
+    scale: 1;
+  }
+  50%{
+    scale: 1.05;
+  }
+  100%{
+    scale: 1;
+  }
+}
+.maincont .cont{
+  color: black;
+  width: 40%;
+  min-height: 100px;
+}
+.cont h1{
+  font-size: clamp(1rem, 1rem + 5vw,3rem);
+}
+.cont h1 span{
+  color: darkslateblue;
+  font-size: clamp(1rem, 1rem + 5vw,3rem);
+}
+.cont .typewriter{
+  font-size: clamp(1rem, 1rem + 5vw,3rem);
+}
+.cont .t-text{
+  font-size: clamp(1rem, 1rem + 5vw,3rem);
+  color: darkslateblue;
+  text-shadow: 0 0 10px rgb(172, 165, 221);
+  font-weight: 600;
+}
+h1{
+  font-size: clamp(1rem, 1rem + 5vw,3rem);
+  margin-left:40px;
+}
+.about{
+  margin: 40px;
+  gap: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about img{
+  width: 350px;
+  height: 60vh;
+  margin: 0 100px;
+  border-radius: 28px;
+}
+.about p{
+  width: 45%;
+  padding: 25px;
+  border-radius: 28px ;
+  box-shadow: 0 0 10px darkslateblue;
+  font-size: clamp(0.8rem, 0.8rem + 5vw,1.5rem);
+  margin: 20px 0;
+}
+.skills{
+  min-height: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+  gap: 40px;
+  align-items: center;
+}
+.skills .s1{
+  width: 40%;
+  padding: 25px;
+  border-radius: 28px ;
+  box-shadow: 0 0 10px darkslateblue;
+  font-size: clamp(0.8rem, 0.8rem + 5vw,1.2rem);
+  margin: 20px 0;
+}
+.skills .s2{
+  width: 40%;
+  padding: 25px;
+  border-radius: 28px ;
+  box-shadow: 0 0 10px darkslateblue;
+  font-size: clamp(0.8rem, 0.8rem + 5vw,1.2rem);
+  margin: 20px 0;
+}
+.s-links i{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 0.2rem solid darkslateblue;
+  border-radius: 50%;
+  color: darkslateblue;
+  margin: 0 8px;
+  font-size: 1.5rem;
+  transition: 0.2s linear;
+}
+.s-links i:hover{
+  scale: 1.5;
+  color: rgb(45, 39, 87);
+  background-color: darkslateblue;
+  filter: drop-shadow(0 0 10px darkslateblue);
+}
+.btn button{
+  width: 30%;
+  height: 6vh;
+  margin: 30px;
+  background-color: darkslateblue;
+  color:white ;
+  border: none;
+  outline: none;
+  font-size: 120%;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+.btn button:hover{
+  cursor: pointer;
+  scale: 1.1;
+  color: darkslateblue;
+  border: 2px solid darkslateblue;
+  background-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 0 40px darkslateblue;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  margin: 100px;
+  padding: 50px;
+  border-radius: 28px;
+  box-shadow: 0 0 10px darkslateblue;
+  text-align: center;
+}
+.contact h1{
+  margin: 35px;
+}
+.s-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  width: 50%;
+  margin-top: 20px;
+}
+@media (min-width: 1200px) {
+  .about img, .skills .s1, .skills .s2, .about p {
+    width: 45%;
+  }
+  .maincont .img {
+    width: 250px;
+    height: 250px;
+  }
+  .btn button {
+    width: 25%;
+  }
+  .contact {
+    margin: 150px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+  .skills {
+    flex-direction: column;
+  }
+  .about img, .skills .s1, .skills .s2 {
+    width: 50%;
+    margin: 0;
+  }
+  .navcont .links a {
+    font-size: 1.3rem;
+  }
+  .maincont .img {
+    width: 180px;
+    height: 180px;
+  }
+  .btn button {
+    width: 40%;
+  }
+  .contact {
+    margin: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navcont {
+    flex-direction: column;
+  }
+  .navcont .links {
+    display: none;
+  }
+  .dropdown.show {
+    display: flex;
+  }
+  .maincont {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .maincont .img {
+    width: 150px;
+    height: 150px;
+  }
+  .about, .skills {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .about img, .skills .s1, .skills .s2, .about p {
+    width: 100%;
+    margin: 0;
+  }
+  .cont h1, .cont .typewriter, .cont .t-text {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .btn button {
+    width: 70%;
+  }
+  .contact {
+    margin: 20px;
+    padding: 20px;
+  }
+  .hamburg, .cancel {
+    display: block;
+  }
+}

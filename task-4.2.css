@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'font1';
+    src: url('Englebert-Regular.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to right, #D1C6F3, #E9BCAC);
+    font-family: 'font1';
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+.container {
+    background-color: rgba(212, 197, 205, 0.204);
+    backdrop-filter: blur(50px);
+    padding: 20px;
+    border-radius: 28px;
+    box-shadow: 0 0 8px gray;
+    width: 500px;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 15px;
+    margin-top: 25px;
+    font-size: 120px;
+}
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 28px;
+    font-family: 'font1';
+}
+button {
+    font-family: 'font1';
+    padding: 10px;
+    background-color:#a184f8;
+    color: black;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+#taskList {
+    list-style-type: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-family: 'font1';
+    border-bottom: 1px solid #ddd;
+}
+
+.delete-btn {
+    background-color: darksalmon;
+    color: black;
+    border: none;
+    border-radius: 28px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #fc427d;
+}

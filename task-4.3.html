@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing Page</title>
+  <link rel="stylesheet" href="task-4.3.css">
+</head>
+<body>
+  <h1>STEP ZONE</h1>
+  <h3>-------------------- F O O T W E A R --------------------</h3>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Search by</h2>
+      
+      <div class="filter">
+        <h3>Category</h3>
+        <label><input type="checkbox" class="filter-category" value="heels"> Heels</label><br>
+        <label><input type="checkbox" class="filter-category" value="luxury"> Luxury</label><br>
+        <label><input type="checkbox" class="filter-category" value="flats"> Flats</label><br>
+        <label><input type="checkbox" class="filter-category" value="ethnic"> Ethnic</label><br>
+        <label><input type="checkbox" class="filter-category" value="casuals"> Casuals</label><br>
+        <label><input type="checkbox" class="filter-category" value="formal"> Formal</label><br>
+        <label><input type="checkbox" class="filter-category" value="sports"> Sports</label><br>
+        <label><input type="checkbox" class="filter-category" value="sandals"> Sandals</label><br>
+        <label><input type="checkbox" class="filter-category" value="slippers"> Slippers</label><br>
+        <label><input type="checkbox" class="filter-category" value="specialized"> Specialized</label><br>
+      </div>
+      
+      <div class="filter">
+        <h3>Price</h3>
+        <label><input type="checkbox" class="filter-price" value="0-50"> $0 - $50</label><br>
+        <label><input type="checkbox" class="filter-price" value="50-100"> $50 - $100</label><br>
+        <label><input type="checkbox" class="filter-price" value="100-200"> $100 - $200</label><br>
+        <label><input type="checkbox" class="filter-price" value="200-500"> $200 - $500</label><br>
+        <label><input type="checkbox" class="filter-price" value="above-500"> Above $500</label><br>
+      </div>
+      
+      <div class="filter">
+        <h3>Brand</h3>
+        <label><input type="checkbox" class="filter-brand" value="brandA"> Nike</label><br>
+        <label><input type="checkbox" class="filter-brand" value="brandC"> Loubotin</label><br>
+        <label><input type="checkbox" class="filter-brand" value="brandD"> Converse</label><br>
+        <label><input type="checkbox" class="filter-brand" value="brandE"> YSL</label><br>
+        <label><input type="checkbox" class="filter-brand" value="others"> Others</label><br>
+        
+      </div>
+      
+      <button id="applyFilters">Apply Filters</button>
+    </aside>
+
+    <main class="main-content">
+      <div class="sorting">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="priceAsc">Price: Low to High</option>
+          <option value="priceDesc">Price: High to Low</option>
+          <option value="newArrivals">New Arrivals</option>
+        </select>
+      </div>
+
+      <div id="productGrid" class="product-grid">
+      </div>
+    </main>
+  </div>
+  <script src="task-4.3.js"></script>
+</body>
+</html>
